@@ -1,0 +1,91 @@
+settings:
+  enabled: true # Fully enable/disable the plugin
+  op_bypass: false # OP players and console ignore permission checks (use / cooldown.bypass / reload)
+
+  click:
+    enabled: true # Use the compass by right-clicking
+    item: COMPASS # Trigger item (COMPASS, RECOVERY_COMPASS, CLOCK)
+    hand: BOTH # BOTH — both hands, MAIN_HAND — main hand only, OFF_HAND — off hand only
+    require_name: false # Require the item display name to match click.name
+    name: "&b&lMoon Compass" # Item display name (HEX colors supported)
+
+  output:
+    mode: CHAT # CHAT — to chat, ACTION_BAR — to action bar, BOTH — to both
+
+  cooldown:
+    enabled: true # Delay between compass usages
+    seconds: 3
+    apply_to_command: false # true — the delay also applies to the /compass command
+
+  permissions:
+    enabled: true # Enable the permission system
+    use: "mooncompass.use"
+    cooldown_bypass: "mooncompass.cooldown.bypass"
+    reload: "mooncompass.reload"
+
+  list: # Direction names shown to the player (HEX colors supported)
+    names: # Full name — {direction} placeholder
+      north: "&aN (North)"
+      north_east: "&aNE (North-East)"
+      east: "&aE (East)"
+      south_east: "&aSE (South-East)"
+      south: "&aS (South)"
+      south_west: "&aSW (South-West)"
+      west: "&aW (West)"
+      north_west: "&aNW (North-West)"
+    short_names: # Short name — {direction_short} placeholder
+      north: "N"
+      north_east: "NE"
+      east: "E"
+      south_east: "SE"
+      south: "S"
+      south_west: "SW"
+      west: "W"
+      north_west: "NW"
+    localized_names: # Single-word name in any language — {direction_localized} placeholder
+      north: "North"
+      north_east: "North-East"
+      east: "East"
+      south_east: "South-East"
+      south: "South"
+      south_west: "South-West"
+      west: "West"
+      north_west: "North-West"
+
+messages:
+  prefix: "&b&lM&9&lL &7» " # Shared message prefix — {prefix} placeholder
+  chat:
+    enabled: true
+    text:
+      - ""
+      - "&6╔ &fCoordinates: &e{x}&f, &e{y}&f, &e{z}"
+      - "&6╚ &fDirection &7» {direction}"
+      - ""
+  action_bar:
+    enabled: true
+    text:
+      - "&f{x}&7, &f{y}&7, &f{z} &8| {direction}"
+  only_player:
+    enabled: true
+    text:
+      - "{prefix}&cOnly players can use this command!"
+  no_permission:
+    enabled: true
+    text:
+      - "{prefix}&cYou do not have permission to use this command!"
+  on_cooldown:
+    enabled: true
+    text:
+      - "{prefix}&cPlease wait &e{seconds} &cmore seconds."
+  reloaded:
+    enabled: true
+    text:
+      - "{prefix}&aConfiguration successfully reloaded!"
+  disabled:
+    enabled: true
+    text:
+      - "{prefix}&cThe compass is temporarily disabled by the administration."
+  usage:
+    enabled: true
+    text:
+      - "{prefix}&7Usage: &e/compass [reload]"
