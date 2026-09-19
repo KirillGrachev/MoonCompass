@@ -138,8 +138,28 @@ public class CompassCommand implements TabExecutor {
 
     }
 
+    /**
+     * Отправляет служебное сообщение, подставляя плейсхолдеры:
+     * игроку — все, консоли — глобальные ({prefix}).
+     *
+     * @param sender отправитель
+     * @param lines  сырые строки сообщения из конфига
+     */
     private void sendMessage(@NotNull CommandSender sender, @NotNull List<String> lines) {
-        lines.forEach(sender::sendMessage);
+
+        if (lines.isEmpty()) {
+            return;
+        }
+
+        if (sender instanceof Player player) {
+
+            messageService.applyPlaceholders(lines, player).forEach(sender::sendMessage);
+            return;
+
+        }
+
+        messageService.applyGlobalPlaceholders(lines).forEach(sender::sendMessage);
+
     }
 
     /**

@@ -53,7 +53,7 @@ public class CompassUseEvent {
         boolean hasBypass = permissionService.hasPermission(player, CompassPermission.COOLDOWN_BYPASS);
 
         if (cooldownService.isOnCooldown(player, hasBypass, fromCommand)) {
-            senderService.sendMessage(player, messageService.applyCooldownPlaceholders(
+            senderService.sendFormatted(player, messageService.applyCooldownPlaceholders(
                     configManager.getCooldownMessage(), player,
                     cooldownService.getRemainingSeconds(player)));
             return;

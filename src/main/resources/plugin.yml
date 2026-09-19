@@ -18,7 +18,7 @@ commands:
 permissions:
   mooncompass.use:
     description: Access to the compass (command and click)
-    default: false
+    default: op
   mooncompass.cooldown.bypass:
     description: Bypass the delay between compass usages
     default: false

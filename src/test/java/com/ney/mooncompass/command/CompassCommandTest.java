@@ -83,6 +83,7 @@ class CompassCommandTest {
     void consoleReceivesOnlyPlayerMessage() {
 
         when(configManager.getOnlyPlayerMessage()).thenReturn(MESSAGE);
+        when(messageService.applyGlobalPlaceholders(MESSAGE)).thenReturn(MESSAGE);
 
         compassCommand.onCommand(sender, command, "compass", new String[0]);
 
@@ -94,6 +95,7 @@ class CompassCommandTest {
     void unknownSubCommandSendsUsage() {
 
         when(configManager.getUsageMessage()).thenReturn(MESSAGE);
+        when(messageService.applyGlobalPlaceholders(MESSAGE)).thenReturn(MESSAGE);
 
         compassCommand.onCommand(sender, command, "compass", new String[]{"help"});
 
@@ -106,6 +108,7 @@ class CompassCommandTest {
 
         when(permissionService.hasPermission(sender, CompassPermission.RELOAD)).thenReturn(false);
         when(configManager.getNoPermissionMessage()).thenReturn(MESSAGE);
+        when(messageService.applyGlobalPlaceholders(MESSAGE)).thenReturn(MESSAGE);
 
         compassCommand.onCommand(sender, command, "compass", new String[]{"reload"});
 
@@ -119,6 +122,7 @@ class CompassCommandTest {
 
         when(permissionService.hasPermission(sender, CompassPermission.RELOAD)).thenReturn(true);
         when(configManager.getReloadedMessage()).thenReturn(MESSAGE);
+        when(messageService.applyGlobalPlaceholders(MESSAGE)).thenReturn(MESSAGE);
 
         compassCommand.onCommand(sender, command, "compass", new String[]{"reload"});
 

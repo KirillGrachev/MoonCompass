@@ -2,6 +2,7 @@ package com.ney.mooncompass.service;
 
 import com.ney.mooncompass.config.type.DisplayMode;
 import net.md_5.bungee.api.ChatMessageType;
+import org.bukkit.command.CommandSender;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
@@ -56,22 +57,63 @@ public class CompassSenderService {
     }
 
     /**
-     * Отправляет служебное сообщение в чат (no_permission, on_cooldown и т.д.).
+     * Отправляет служебное сообщение игроку (no_permission, disabled и т.д.).
+     * Перед отправкой подставляет плейсхолдеры игрока, включая {prefix}.
      *
      * @param player игрок
-     * @param lines  строки сообщения
+     * @param lines  сырые строки сообщения из конфига
      */
     public void sendMessage(@NotNull Player player, @Nullable List<String> lines) {
-        sendChat(player, lines);
-    }
-
-    private void sendChat(@NotNull Player player, @Nullable List<String> lines) {
 
         if (lines == null || lines.isEmpty()) {
             return;
         }
 
-        lines.forEach(player::sendMessage);
+        sendChat(player, compassMessageService.applyPlaceholders(lines, player));
+
+    }
+
+    /**
+     * Отправляет служебное сообщение отправителю.
+     * Игроку подставляются все плейсхолдеры, консоли — только глобальные.
+     *
+     * @param sender отправитель
+     * @param lines  сырые строки сообщения из конфига
+     */
+    public void sendMessage(@NotNull CommandSender sender, @Nullable List<String> lines) {
+
+        if (lines == null || lines.isEmpty()) {
+            return;
+        }
+
+        if (sender instanceof Player player) {
+
+            sendMessage(player, lines);
+            return;
+
+        }
+
+        sendChat(sender, compassMessageService.applyGlobalPlaceholders(lines));
+
+    }
+
+    /**
+     * Отправляет уже отформатированные строки (плейсхолдеры подставлены заранее).
+     *
+     * @param player игрок
+     * @param lines  готовые строки сообщения
+     */
+    public void sendFormatted(@NotNull Player player, @Nullable List<String> lines) {
+        sendChat(player, lines);
+    }
+
+    private void sendChat(@NotNull CommandSender sender, @Nullable List<String> lines) {
+
+        if (lines == null || lines.isEmpty()) {
+            return;
+        }
+
+        lines.forEach(sender::sendMessage);
 
     }
 

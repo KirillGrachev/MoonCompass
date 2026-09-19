@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0fd822dc-259f-491e-af32-1c992f69d9f6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/command/CompassCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/command/CompassCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/event/CompassUseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/event/CompassUseEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/service/CompassMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/service/CompassMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/service/CompassSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/service/CompassSenderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ney/mooncompass/command/CompassCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ney/mooncompass/command/CompassCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ney/mooncompass/event/CompassUseEventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ney/mooncompass/event/CompassUseEventTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KirillGrachev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KirillGrachev/MoonCompass.git&quot;,
+    &quot;accountId&quot;: &quot;577b9818-6206-4996-904c-3313ee5e4c22&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3JW8kgQtBqGz6s2JvVdwcaNf6mc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.MoonCompass [compile].executor": "Run",
+    "Maven.MoonCompass [verify].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Users/Кирилл/Desktop/MoonCompass",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn compile" />
+      <command value="mvn verify" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="MoonCompass" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="MoonCompass" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fd822dc-259f-491e-af32-1c992f69d9f6" name="Changes" comment="" />
+      <created>1789765610255</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789765610255</updated>
+    </task>
+    <servers />
+  </component>
+</project>

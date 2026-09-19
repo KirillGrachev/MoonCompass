@@ -74,10 +74,23 @@ public class CompassMessageService {
      * @param player игрок
      * @return строки с подставленными значениями
      */
-    private @NotNull List<String> applyPlaceholders(@NotNull List<String> lines,
-                                                    @NotNull Player player) {
+    public @NotNull List<String> applyPlaceholders(@NotNull List<String> lines,
+                                                   @NotNull Player player) {
+        return apply(lines, buildPlaceholders(player));
+    }
 
-        Map<String, String> placeholders = buildPlaceholders(player);
+    /**
+     * Подставляет глобальные плейсхолдеры (не зависят от игрока, работают и в консоли).
+     *
+     * @param lines строки из конфига
+     * @return строки с подставленными значениями
+     */
+    public @NotNull List<String> applyGlobalPlaceholders(@NotNull List<String> lines) {
+        return apply(lines, buildGlobalPlaceholders());
+    }
+
+    private @NotNull List<String> apply(@NotNull List<String> lines,
+                                        @NotNull Map<String, String> placeholders) {
 
         return lines.stream()
                 .map(line -> HexColorUtil.color(PlaceholderUtil.apply(line, placeholders)))
@@ -101,9 +114,7 @@ public class CompassMessageService {
         Map<String, String> placeholders = buildPlaceholders(player);
         placeholders.put("seconds", String.valueOf(remainingSeconds));
 
-        return lines.stream()
-                .map(line -> HexColorUtil.color(PlaceholderUtil.apply(line, placeholders)))
-                .collect(Collectors.toList());
+        return apply(lines, placeholders);
 
     }
 
@@ -119,14 +130,22 @@ public class CompassMessageService {
         return buildPlaceholders(player).getOrDefault(placeholder, "");
     }
 
+    private @NotNull Map<String, String> buildGlobalPlaceholders() {
+
+        Map<String, String> placeholders = PlaceholderUtil.newPlaceholders();
+        placeholders.put("prefix", configManager.getPrefix());
+
+        return placeholders;
+
+    }
+
     private @NotNull Map<String, String> buildPlaceholders(@NotNull Player player) {
 
         Location location = player.getLocation();
         DirectionName directionName = directionService.resolveDirectionName(location);
 
-        Map<String, String> placeholders = PlaceholderUtil.newPlaceholders();
+        Map<String, String> placeholders = buildGlobalPlaceholders();
 
-        placeholders.put("prefix", configManager.getPrefix());
         placeholders.put("player", player.getName());
         placeholders.put("world", location.getWorld() == null ? "unknown" : location.getWorld().getName());
         placeholders.put("x", String.valueOf(location.getBlockX()));

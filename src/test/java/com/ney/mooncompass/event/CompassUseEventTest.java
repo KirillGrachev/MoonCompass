@@ -95,7 +95,7 @@ class CompassUseEventTest {
 
         compassUseEvent.onCompassUse(player, true);
 
-        verify(senderService).sendMessage(player, MESSAGE);
+        verify(senderService).sendFormatted(player, MESSAGE);
         verify(cooldownService, never()).markUsed(player);
         verify(senderService, never()).sendCompassOutput(player);
 
