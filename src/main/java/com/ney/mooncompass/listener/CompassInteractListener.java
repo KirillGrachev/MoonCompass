@@ -38,7 +38,12 @@ public class CompassInteractListener implements Listener {
 
     }
 
-    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
+    /**
+     * Компас не изменяет мир, поэтому клик читается даже если интеракт
+     * отменён другим плагином (регионы, античит, vanish): ignoreCancelled
+     * здесь заставил бы молча проглатывать такие клики.
+     */
+    @EventHandler(priority = EventPriority.HIGHEST)
     public void onCompassInteract(@NotNull PlayerInteractEvent event) {
 
         if (!configManager.isEnabled()) return;

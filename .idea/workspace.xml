@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fd822dc-259f-491e-af32-1c992f69d9f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/command/CompassCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/command/CompassCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/event/CompassUseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/event/CompassUseEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/service/CompassMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/service/CompassMessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/service/CompassSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ney/mooncompass/service/CompassSenderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ney/mooncompass/command/CompassCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ney/mooncompass/command/CompassCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ney/mooncompass/event/CompassUseEventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ney/mooncompass/event/CompassUseEventTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
